@@ -1,0 +1,20 @@
+{
+    "name": "leeroy/sail-fs3",
+    "description": "S3 Filesystem Adapter for SailCMS",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Leeroy\\FS3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marc Giroux",
+            "email": "marc@leeroy.ca"
+        }
+    ],
+    "require": {
+        "league/flysystem-aws-s3-v3": "^3.0"
+    }
+}
