@@ -18,10 +18,10 @@ class Module implements AppModule
         // Setup S3 Filesystem protocol
         $client = new S3Client([
             'credentials' => [
-                'key' => $_ENV['FS3_API_KEY'],
-                'secret' => $_ENV['FS3_API_SECRET']
+                'key' => env('FS3_API_KEY'),
+                'secret' => env('FS3_API_SECRET')
             ],
-            'region' => $_ENV['FS3_REGION'],
+            'region' => env('FS3_REGION'),
             'version' => 'latest'
         ]);
 
@@ -31,7 +31,7 @@ class Module implements AppModule
             $visibility = new PortableVisibilityConverter(Visibility::PRIVATE);
         }
 
-        $s3Adapter = new AwsS3V3Adapter($client, $_ENV['FS3_BUCKET'], '', $visibility);
+        $s3Adapter = new AwsS3V3Adapter($client, env('FS3_BUCKET'), '', $visibility);
 
         Filesystem::mount('s3', $s3Adapter);
         Filesystem::init();
