@@ -25,7 +25,7 @@ class Module implements AppModule
             'version' => 'latest'
         ]);
 
-        if ($_ENV['FS3_ACL'] === 'public') {
+        if (env('FS3_ACL') === 'public') {
             $visibility = new PortableVisibilityConverter(Visibility::PUBLIC);
         } else {
             $visibility = new PortableVisibilityConverter(Visibility::PRIVATE);
