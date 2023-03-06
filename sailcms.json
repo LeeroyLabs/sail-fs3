@@ -1,0 +1,6 @@
+{
+    "manifestVersion": 1,
+    "requiredMinimumVersion": 3,
+    "packageType": "module",
+    "namespace": "Leeroy\\FS3"
+}
