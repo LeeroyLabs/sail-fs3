@@ -39,7 +39,14 @@ class Module implements AppModule
 
     public function info(): ModuleInformation
     {
-        return new ModuleInformation('FS3', 'filesystem Adapter for AWS S3', 1.0, '1.0.0');
+        return new ModuleInformation(
+            'FS3', 
+            'filesystem Adapter for AWS S3', 
+            1.0, 
+            '1.0.0', 
+            'LeeroyLabs', 
+            'https://github.com/orgs/LeeroyLabs/repositories'
+        );
     }
 
     public function cli(): Collection
