@@ -8,7 +8,7 @@ use League\Flysystem\AwsS3V3\PortableVisibilityConverter;
 use League\Flysystem\Visibility;
 use SailCMS\Collection;
 use SailCMS\Contracts\AppModule;
-use SailCMS\Filesystem;
+use SailCMS\Internal\Filesystem;
 use SailCMS\Types\ModuleInformation;
 
 class Module implements AppModule
