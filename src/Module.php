@@ -13,9 +13,9 @@ use SailCMS\Types\ModuleInformation;
 
 class Module implements AppModule
 {
-    public function __construct()
+    public function init(): void
     {
-        // Setup S3 Filesystem protocol
+         // Setup S3 Filesystem protocol
         $client = new S3Client([
             'credentials' => [
                 'key' => env('FS3_API_KEY'),
